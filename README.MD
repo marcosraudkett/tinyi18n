@@ -1,7 +1,7 @@
 # tinyi18n [JS Library]
 
 ## Additions
-Found this project online and rand into a problem that it didn't have nested translations so I decided to add them and also make a save state feature using cookies.
+Found this project online and ran into a problem that it didn't have nested translations so I decided to add them and also make a save state feature using cookies.
 
 ## Using nested translations
 - `data-translatekey="general>pages>home>content>title"`: just add > between each nesting. check inside example.html and translations.json.
