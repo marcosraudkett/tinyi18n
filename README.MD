@@ -7,7 +7,7 @@ Found this project online and ran into a problem that it didn't have nested tran
 
 ## Using nested translations
 - `data-translatekey="general>pages>home>content>title"`: just add > between each nesting. check inside example.html and translations.json.
-- use function save_language(days, language); to save languages.
+- use function save_language(dayCount, language); to save languages. (dayCount - how long the language will be saved for and language - the language code.
 
 ## Original README starts from here:
 
