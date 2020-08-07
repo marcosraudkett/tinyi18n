@@ -28,8 +28,12 @@ Found this project online and ran into a problem that it didn't have nested tran
   <body>
     <h1 data-translatekey="title"></h1>
     <p data-translatekey="description"></p>
+    <!-- nested version: -->
+    <p data-translatekey="homepage>description"></p>
 
     <input type="text" data-translatekey="searchbox" data-translateattribute="value"></input>
+    <!-- nested version: -->
+    <input type="text" data-translatekey="homepage>inputs>searchbox" data-translateattribute="value"></input>
 
     <script src="tinyi18n.js"></script>
     <script>
@@ -50,6 +54,16 @@ Found this project online and ran into a problem that it didn't have nested tran
       "en": "Title in English",
       "es": "Título en Inglés"
     },
+    "nested": {
+      "title": {
+        /* 
+          calling nested: nested>title 
+          you can add as many nestings as you'd like just use ">" sign.
+        */
+        "en": "Title in English",
+        "es": "Título en Inglés"
+      }
+    }
     "description": {
       "en": "I like cats",
       "es": "Me gustan los gatos"
