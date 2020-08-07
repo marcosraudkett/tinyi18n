@@ -1,5 +1,7 @@
 # tinyi18n [JS Library]
 
+A tiny javascript library for internationalization and easy switching of languages on HTML pages
+
 ## Additions
 Found this project online and ran into a problem that it didn't have nested translations so I decided to add them and also make a save state feature using cookies.
 
@@ -7,9 +9,7 @@ Found this project online and ran into a problem that it didn't have nested tran
 - `data-translatekey="general>pages>home>content>title"`: just add > between each nesting. check inside example.html and translations.json.
 - use function save_language(days, language); to save languages.
 
-## Previous README starts from here:
-
-A tiny javascript library for internationalization and easy switching of languages on HTML pages
+## Original README starts from here:
 
 > **Note:** This is an experimental project at the moment. Use at your own risk
 
