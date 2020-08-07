@@ -1,0 +1,39 @@
+{
+	"default_language": "en",
+	"languages": ["en", "et", "fi"],
+	"translations": {
+		"test": {
+			"en": "Home",
+			"et": "Kodu",
+			"fi": "Etusivu"
+		},
+		"general": {
+			"pages": {
+				"home": {
+					"title": {
+						"en": "Tinyi18n EN",
+						"et": "Tinyi18n ET",
+						"fi": "Tinyi18n FI"
+					},
+					"content": {
+						"searchbox": {
+							"en": "Email",
+							"et": "Emaili Aadress",
+							"fi": "S�hk�posti"
+						},
+						"title": {
+							"en": "Tinyi18n",
+							"et": "Tinyi18n",
+							"fi": "Tinyi18n"
+						},
+						"description": {
+							"en": "Edited by MVRC Software",
+							"et": "Toimetanud MVRC Software",
+							"fi": "Muokannut MVRC Software"
+						}
+					}
+				}
+			}
+		}
+	}
+}

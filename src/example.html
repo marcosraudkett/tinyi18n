@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title data-translatekey="general>pages>home>title"></title>
+	</head>
+	<body>
+		<h1 data-translatekey="general>pages>home>content>title"></h1>
+		<p data-translatekey="general>pages>home>content>description"></p>
+		<input type="text" data-translatekey="general>pages>home>content>searchbox" data-translateattribute="placeholder" placeholder="Email"></input>
+
+		<button onclick="tinyi18n.setLang('en')">In English</button>
+		<button onclick="tinyi18n.setLang('fi')">Suomeksi</button><br>
+		<button onclick="tinyi18n.setLang('et')">Eesti Keeles</button><br>
+
+		<output id="initial_language"></output>
+
+		<script src="js/tinyi18n.js"></script>
+		<script src="js/cookie.js"></script>
+		<script>
+			tinyi18n.loadTranslations('translations/translations.json')
+
+			document.getElementById('initial_language').innerHTML = tinyi18n.getLang();
+		</script>
+	</body>
+</html>
