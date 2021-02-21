@@ -11,18 +11,18 @@ let tinyi18n = {
 	_current_language: 'en',
 
 	getLang: function(new_language) {
-		var language = _cke('lang');
+		var language = _gl('lang');
 		if(language)
 		{
-			return _cke('lang')
-			tinyi18n._current_language = _cke('lang')
+			return _gl('lang')
+			tinyi18n._current_language = _gl('lang')
 		} else {
 			return tinyi18n._current_language
 		}
 	},
 
 	setLang: function(language) {
-		saveLanguage(250,language);
+		_sl(250,language);
 		for (let i = 0; i < tinyi18n._translate_elements.length; i++) {
 			const key = tinyi18n._translate_elements[i].getAttribute('data-translatekey')
 			const attribute = tinyi18n._translate_elements[i].getAttribute('data-translateattribute')
@@ -52,7 +52,7 @@ let tinyi18n = {
 				tinyi18n._translate_elements[i].innerHTML = translated_text
 			}
 		}
-		tinyi18n._current_language = _cke('lang')
+		tinyi18n._current_language = _gl('lang')
 
 		console.log(tinyi18n._current_language);
 		document.documentElement.lang = language
@@ -60,7 +60,7 @@ let tinyi18n = {
 	},
 
 	loadTranslations: function(filename) {
-		tinyi18n._current_language = _cke('lang')
+		tinyi18n._current_language = _gl('lang')
 		let request = new XMLHttpRequest()
 
 		request.overrideMimeType('application/json')
@@ -69,15 +69,15 @@ let tinyi18n = {
 			if (request.readyState == 4 && request.status == '200') {
 				tinyi18n._data = JSON.parse(request.responseText)
 				tinyi18n._translate_elements = document.querySelectorAll('[data-translatekey]') 
-				langFromCookie = tinyi18n._current_language = _cke('lang');
+				langFromCookie = tinyi18n._current_language = _gl('lang');
 				if(langFromCookie) {
 					var exists = false;
-					tinyi18n._data.languages.forEach(function(e) { if(e == _cke('lang')) { exists = true; } });
+					tinyi18n._data.languages.forEach(function(e) { if(e == _gl('lang')) { exists = true; } });
 					if(exists)
 					{
-						tinyi18n._current_language = tinyi18n._current_language = _cke('lang');
+						tinyi18n._current_language = tinyi18n._current_language = _gl('lang');
 					} else {
-						console.log("Language "+_cke('lang')+" was not found, falling back to default language");
+						console.log("Language "+_gl('lang')+" was not found, falling back to default language");
 						tinyi18n._current_language = tinyi18n._data.default_language || 'en'
 					}
 				} else {
