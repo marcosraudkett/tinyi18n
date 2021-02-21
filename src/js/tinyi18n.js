@@ -40,7 +40,6 @@ let tinyi18n = {
 					var translated_text = tinyi18n._data.translations[key][language]
 				}
 			}
-
 			catch (error) {
 				console.error('tinyi18n: Key', "'" + key + "'", 'is not in JSON file')
 			}
@@ -72,35 +71,22 @@ let tinyi18n = {
 				tinyi18n._translate_elements = document.querySelectorAll('[data-translatekey]') 
 				langFromCookie = tinyi18n._current_language = _cke('lang');
 				if(langFromCookie) {
-					tinyi18n._current_language = tinyi18n._current_language = _cke('lang');
+					var exists = false;
+					tinyi18n._data.languages.forEach(function(e) { if(e == _cke('lang')) { exists = true; } });
+					if(exists)
+					{
+						tinyi18n._current_language = tinyi18n._current_language = _cke('lang');
+					} else {
+						console.log("Language "+_cke('lang')+" was not found, falling back to default language");
+						tinyi18n._current_language = tinyi18n._data.default_language || 'en'
+					}
 				} else {
 					tinyi18n._current_language = tinyi18n._data.default_language || 'en'
 				}
-				tinyi18n.setLang(tinyi18n._current_language)
+				tinyi18n.setLang(tinyi18n._current_language);
 			}
 		}
 
 		request.send(null)
 	}
-}
-
-function saveLanguage(x,lang) 
-{
-    var now = new Date();
-    var time = now.getTime();
-  if(x == '') {
-    var expireTime = time + 1000*22620000;
-  } else {
-    Date.prototype.addDays = function(days) 
-    {
-      var e = new Date(this.valueOf());
-      e.setDate(e.getDate() + days);
-      return e;
-    }
-    var e = new Date();
-    var expireTime = e.addDays(x);   
-  }
-   now.setTime(expireTime);
-   var tempExp = 'Wed, 31 Oct 2017 08:50:17 GMT';
-    document.cookie = 'lang='+lang+'; expires='+now.toGMTString()+';path=/';
 }
