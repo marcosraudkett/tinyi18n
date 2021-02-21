@@ -1,6 +1,6 @@
 # tinyi18n [JS Library]
 
-A tiny javascript library for internationalization and easy switching of languages on HTML pages
+A tiny javascript library for internationalization and easy switching of languages on HTML pages.
 Found this project online and noticed it didn't have nested translations so I decided to add them and also make a save state feature using cookies.
 
 ## Additions
