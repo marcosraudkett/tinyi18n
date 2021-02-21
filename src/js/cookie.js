@@ -16,3 +16,25 @@ function _cke(name)
 
   return unescape(cookie.substring(begin + prefix.length, end));
 } 
+
+function saveLanguage(x,lang) 
+{
+  var now = new Date();
+  var time = now.getTime();
+  if(x == '') {
+    var expireTime = time + 1000*22620000;
+  } else {
+    Date.prototype.addDays = function(days) 
+    {
+      var e = new Date(this.valueOf());
+      e.setDate(e.getDate() + days);
+      return e;
+    }
+    var e = new Date();
+    var expireTime = e.addDays(x);   
+  }
+  
+  now.setTime(expireTime);
+  var tempExp = 'Wed, 31 Oct 2017 08:50:17 GMT';
+  document.cookie = 'lang='+lang+'; expires='+now.toGMTString()+';path=/';
+}
