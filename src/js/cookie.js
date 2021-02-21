@@ -1,4 +1,4 @@
-function _cke(name) 
+function _gl(name) 
 {
   var cookie = document.cookie;
   var prefix = name + "=";
@@ -17,7 +17,7 @@ function _cke(name)
   return unescape(cookie.substring(begin + prefix.length, end));
 } 
 
-function saveLanguage(x,lang) 
+function _sl(x,lang) 
 {
   var now = new Date();
   var time = now.getTime();
