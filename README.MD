@@ -56,10 +56,6 @@ Found this project online and noticed it didn't have nested translations so I de
     },
     "nested": {
       "title": {
-        /* 
-          calling nested: nested>title 
-          you can add as many nestings as you'd like just use ">" sign.
-        */
         "en": "Title in English",
         "es": "Título en Inglés"
       }
