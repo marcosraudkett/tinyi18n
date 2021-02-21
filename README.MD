@@ -16,7 +16,7 @@ _sl(dayCount, language); /* set language */
 
 ## Using nested translations
 - `data-translatekey="general>pages>home>content>title"`: just add > between each nesting. check inside example.html and translations.json.
-- use function save_language(dayCount, language); to save languages. (dayCount - how long the language will be saved for and language - the language code.
+- use function _sl(dayCount, language); to save languages. (dayCount - how long the language will be saved for and language - the language code.
 
 ## Original README starts from here:
 
