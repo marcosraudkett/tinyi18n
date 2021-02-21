@@ -1,4 +1,5 @@
 {
+	"utf8": "�",
 	"default_language": "en",
 	"languages": ["en", "et", "fi"],
 	"translations": {
@@ -19,7 +20,7 @@
 						"searchbox": {
 							"en": "Email",
 							"et": "Emaili Aadress",
-							"fi": "S�hk�posti"
+							"fi": "Sähköposti"
 						},
 						"title": {
 							"en": "Tinyi18n",
